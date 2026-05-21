@@ -12,8 +12,7 @@ import (
 
 func main() {
 
-	// Fetch RSS feeds khi app start
-	go rss.ProcessFeeds()
+	go rss.StartWorker()
 
 	router := gin.Default()
 	router.SetTrustedProxies(nil)
@@ -30,6 +29,9 @@ func main() {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "Global News Backend Running 🚀",
 		})
+	})
+	router.HEAD("/", func(c *gin.Context) {
+		c.Status(http.StatusOK)
 	})
 
 	router.GET("/articles", article.GetArticlesHandler)

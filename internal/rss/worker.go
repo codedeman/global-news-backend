@@ -2,12 +2,21 @@ package rss
 
 import (
 	"log"
+	"time"
 
 	"github.com/codedeman/global-news-backend/internal/article"
 )
 
+func StartWorker() {
+	ProcessFeeds()
+	ticker := time.NewTicker(15 * time.Minute)
+	for range ticker.C {
+		ProcessFeeds()
+	}
+}
+
 func ProcessFeeds() {
-	var all []article.Article
+	all := []article.Article{}
 
 	for _, source := range FeedSources {
 		log.Println("Fetching:", source.Name)

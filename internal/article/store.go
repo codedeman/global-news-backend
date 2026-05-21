@@ -4,7 +4,7 @@ import "sync"
 
 var (
 	mu    sync.RWMutex
-	store []Article
+	store = []Article{}
 )
 
 func SetArticles(a []Article) {
