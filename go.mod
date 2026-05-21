@@ -1,4 +1,4 @@
-module github.com/yourname/global-news-backend
+module github.com/codedeman/global-news-backend
 
 go 1.26.3
 

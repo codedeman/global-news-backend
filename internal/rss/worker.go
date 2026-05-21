@@ -3,7 +3,7 @@ package rss
 import (
 	"log"
 
-	"github.com/yourname/global-news-backend/internal/article"
+	"github.com/codedeman/global-news-backend/internal/article"
 )
 
 func ProcessFeeds() {

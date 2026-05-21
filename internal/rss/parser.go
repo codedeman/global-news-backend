@@ -5,7 +5,7 @@ import (
 
 	"github.com/mmcdole/gofeed"
 
-	"github.com/yourname/global-news-backend/internal/article"
+	"github.com/codedeman/global-news-backend/internal/article"
 )
 
 func Parse(feedData []byte) ([]article.Article, error) {

@@ -6,8 +6,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/yourname/global-news-backend/internal/article"
-	"github.com/yourname/global-news-backend/internal/rss"
+	"github.com/codedeman/global-news-backend/internal/article"
+	"github.com/codedeman/global-news-backend/internal/rss"
 )
 
 func main() {
