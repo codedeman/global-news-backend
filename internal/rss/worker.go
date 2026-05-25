@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/codedeman/global-news-backend/internal/article"
+	"github.com/codedeman/neura-backend/internal/article"
 )
 
 func StartWorker() {

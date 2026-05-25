@@ -18,4 +18,20 @@ var FeedSources = []FeedSource{
 		Name: "7News Australia",
 		URL:  "https://7news.com.au/feed",
 	},
+	{
+		Name: "Vietnam News",
+		URL:  "https://vietnamnews.vn/rss",
+	},
+	{
+		Name: "VietnamPlus",
+		URL:  "https://en.vietnamplus.vn/rss.html",
+	},
+	{
+		Name: "VNA",
+		URL:  "https://vnanet.vn/en/rss/",
+	},
+	{
+		Name: "Google News VN",
+		URL:  "https://news.google.com/rss?hl=vi&gl=VN&ceid=VN:vi",
+	},
 }

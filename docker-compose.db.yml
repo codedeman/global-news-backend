@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:9
+    environment:
+      MYSQL_ROOT_PASSWORD: "02111997"
+      MYSQL_DATABASE: ai-agent-postgres
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./migrations:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p02111997"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - neura-net
+
+volumes:
+  dbdata:
+
+networks:
+  neura-net:
+    name: neura-net
